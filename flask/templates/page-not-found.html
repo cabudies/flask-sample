@@ -288,10 +288,15 @@
                                 </div>
                                 <div class="error"></div>
                                 <div class="form loginBox">
-                                    <form method="" action="" accept-charset="UTF-8">
-                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                                    <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                    <form method="post" action="" >
+                                        {#{ form.csrf }}
+                                        <div class="input text">
+                                            {{ form.name }}
+                                        </div>
+                                        <div class="input password">
+                                            {{ form.password }#}
+                                        </div>
+                                    <input class="btn btn-default btn-login" type="button" value="Login">
                                     </form>
                                 </div>
                              </div>

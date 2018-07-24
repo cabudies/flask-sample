@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Thank you for adding new menu item.</p>
+
+    <p>Details of new Menu item are as follows: {{ menuItem }}</p>
+    <ul>
+        {% for key, value in menuItem.items() %}
+            <li>
+                {{ key }} is: {{ value }}
+            </li>
+        {% endfor %}
+    </ul>
+    <p>Name of the menu item: {{ menuItem.name }}</p>
+
+
+</body>
+</html>
