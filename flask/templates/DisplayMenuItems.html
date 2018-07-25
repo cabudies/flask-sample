@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Menu Items</title>
+    <link rel="shortcut icon" type="image/png" href="https://www.brillicaservices.com/wp-content/uploads/2018/05/cropped-logo-icon-32x32.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Menu Name</th>
+            <th>Menu Price</th>
+            <th>Menu Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in rows %}
+          <tr>
+              <td>{{ item[0] }}</td>
+              <td>{{ item[1] }}</td>
+              <td>{{ item[2] }}</td>
+              <td>{{ item[3] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
